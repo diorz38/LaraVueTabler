@@ -25,3 +25,7 @@
     email    : admin@gmail.com
     password : bismillah
 ```
+
+### ss
+### ss
+<img src="https://raw.githubusercontent.com/diorz38/LaraVuetabler/main/ss/ss1.png" alt="employee list preview">
