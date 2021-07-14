@@ -9,18 +9,19 @@
 
 ### Installation 
 - Open terminal
-- Create database simple_laravel_vue
-- Configure .env file
 - Clone the repo => `git clone https://github.com/diorz38/LaraVueTabler.git`
+- Or click use this template up there, to make your own
 - Change directory to backend root dir => `cd LaraVueTabler/backend`
+- run `cp .env.example .env`
+- run `touch database\database.sqlite`
 - Composer install => `composer install`
 - migrate => `php artisan migrate`
 - db seed => `php artisan db:seed`  
-- passport install => `php artisan passport:install`
-- run the server => `php artisan serve --port 8000`
+- run `php artisan passport:install`
+- run `php artisan serve --port 8000`
 - change directory to frontend dir => `cd ../frontend`
-- npm install => `npm install`
-- npm run  => `npm run dev`
+- run `npm install`
+- run `npm run dev`
   
 ### open `http://localhost:3000/` on your browser
 
