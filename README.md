@@ -1,7 +1,7 @@
 
 
 
-## Sample Apps Laravel
+## Sample CRUD Laravel
 
 - Laravel 8 (with laravel-passport auth)
 - Vue 3
