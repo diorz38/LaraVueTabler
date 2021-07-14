@@ -23,9 +23,8 @@
 #### default user
 ```
     email    : admin@gmail.com
-    password : bismillah
+    password : password
 ```
 
 ### ss
-### ss
-<img src="https://raw.githubusercontent.com/diorz38/LaraVuetabler/main/ss/ss1.png" alt="employee list preview">
+<img src="https://raw.githubusercontent.com/diorz38/LaraVueTabler/main/ss/ss1.png" alt="employee list preview">
