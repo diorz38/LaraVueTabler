@@ -1,6 +1,5 @@
 <template>
-  <div class="wrapper">
-    <div class="sticky-top">
+  <div class="sticky-top">
     <header class="navbar navbar-expand-md navbar-light d-print-none">
       <div class="container-xl">
         <button
@@ -20,7 +19,7 @@
         >
           <a href=".">
             <img
-              src="./assets/logo.svg"
+              src="../assets/logo.svg"
               width="110"
               height="32"
               alt="Tabler"
@@ -151,80 +150,65 @@
       </div>
     </header>
   </div>
-
-  <router-view @user_success_login="userLogged"></router-view>
-  <footer-comp/>
-</div>
-
 </template>
 
-<script>
-import auth from "./auth";
-import router from "./router";
-import FooterComp from "./components/FooterComp.vue";
+<script setup>
+import auth from "../auth";
+import router from "../router";
 
 export default {
-  components: { FooterComp },
   data() {
-
     return {
       auth: {
         authenticated: false,
-        profile: null
+        profile: null,
       },
-    }
+    };
   },
   methods: {
     async checkUserLogin() {
-      let token = localStorage.getItem('id_token');
+      let token = localStorage.getItem("id_token");
       if (token !== null) {
-        this.axios.get(
-            'api/user', {
-              headers: {"Authorization": "Bearer " + token}
-            }
-        ).then(response => {
-          this.auth.authenticated = true
-          this.auth.profile = response.data.data
-        }).catch((error) => {
-          console.log(error)
-        })
+        this.axios
+          .get("api/user", {
+            headers: { Authorization: "Bearer " + token },
+          })
+          .then((response) => {
+            this.auth.authenticated = true;
+            this.auth.profile = response.data.data;
+          })
+          .catch((error) => {
+            console.log(error);
+          });
       }
     },
     userLogged($user_profile) {
       this.auth.authenticated = true;
       this.auth.profile = $user_profile;
       this.axios.defaults.headers = {
-        'Authorization': `Bearer ${localStorage.getItem('id_token')}`
-      }
+        Authorization: `Bearer ${localStorage.getItem("id_token")}`,
+      };
       console.log($user_profile);
     },
     logOut() {
-      console.log("tes")
+      console.log("tes");
       this.auth.authenticated = false;
       this.auth.profile = null;
-      localStorage.setItem('id_token', null);
-      this.$router.push({name : 'login'})
-
-    }
-
+      localStorage.setItem("id_token", null);
+      this.$router.push({ name: "login" });
+    },
   },
   mounted() {
     this.$nextTick(async () => {
-      await auth.check(this)
-      console.log("=======")
-      console.log(this.auth.profile)
-
-    })
-  }
-
-}
-
+      await auth.check(this);
+      console.log("=======");
+      console.log(this.auth.profile);
+    });
+  },
+};
 </script>
 
-<style>
-  #text-button{
-    cursor: pointer;
-  }
+<style scoped>
 #nav-item {
   cursor: pointer;
 }
