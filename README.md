@@ -10,7 +10,7 @@
 ### Installation 
 - Open terminal
 - Clone the repo => `git clone https://github.com/diorz38/LaraVueTabler.git`
-- Or click use this template up there, to make your own
+- Or click [use this template](https://github.com/diorz38/LaraVueTabler/generate) up there, to make your own
 - Change directory to backend root dir => `cd LaraVueTabler/backend`
 - run `cp .env.example .env`
 - run `touch database\database.sqlite`
