@@ -62,6 +62,12 @@
                   {{ this.auth.profile.email }}
                 </div>
               </div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="21" height="21" viewBox="0 0 21 21" 
+                  stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <polyline points="6 9 12 15 18 9" />
+              </svg>
+
             </a>
             <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
               <a href="#" class="dropdown-item">Set status</a>
@@ -196,10 +202,10 @@ export default {
       this.axios.defaults.headers = {
         'Authorization': `Bearer ${localStorage.getItem('id_token')}`
       }
-      console.log($user_profile);
+      // console.log($user_profile);
     },
     logOut() {
-      console.log("tes")
+      console.log("logout")
       this.auth.authenticated = false;
       this.auth.profile = null;
       localStorage.setItem('id_token', null);

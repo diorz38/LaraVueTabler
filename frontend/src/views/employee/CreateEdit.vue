@@ -91,19 +91,26 @@
 
                       <div class="m-3">
                         <label for="start_date" class="form-label">Start Date*</label>
-                        <input type="text" class="form-control" 
+                        <flat-pickr :config="config" v-model="employee.start_date"
+                          id="start_date" name="start_date"
+                          :class="{'is-invalid': validationErrorMessage.start_date,}"/>
+                        <!-- <input type="text" class="form-control"
                         :class="{'is-invalid': validationErrorMessage.start_date,}"
                           id="start_date" name="start_date" placeholder="yyyy-mm-dd"
-                          v-model="employee.start_date"/>
+                          v-model="employee.start_date"/> -->
                         <div class="invalid-feedback" v-if="validationErrorMessage.start_date">
                           {{ validationErrorMessage.start_date[0] }}
                         </div>
                       </div>
                       <div class="m-3">
                         <label for="end_date" class="form-label">End Date</label>
-                        <input type="text" class="form-control" name="start_date" placeholder="yyyy-mm-dd"
+                        <flat-pickr :config="config" name="start_date"
                           id="end_date" v-model="employee.end_date"
-                          :class="{ 'is-invalid': validationErrorMessage.end_date }"/>
+                          :class="{'is-invalid': validationErrorMessage.start_date,}"/>
+                        
+                        <!-- <input type="text" class="form-control" name="start_date" placeholder="yyyy-mm-dd"
+                          id="end_date" v-model="employee.end_date"
+                          :class="{ 'is-invalid': validationErrorMessage.end_date }"/> -->
                         <div class="invalid-feedback" v-if="validationErrorMessage.end_date">
                           {{ validationErrorMessage.end_date[0] }}
                         </div>
@@ -129,6 +136,7 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
@@ -136,6 +144,13 @@ export default {
       validationErrorMessage: "",
       errorMessage: "",
       isUpdate: false,
+      config: {
+          // wrap: true, // set wrap to true only when using 'input-group'
+          altFormat: 'd M Y',
+          altInput: true,
+          dateFormat: 'Y-m-d',
+          // locale: Hindi, // locale for this instance only          
+      },
     };
   },
   methods: {
@@ -219,6 +234,7 @@ export default {
     if (this.isUpdate) {
       this.getEmployee(this.$route.params.id);
     }
+    // flatPickr('#start_date')
   },
 };
 </script>

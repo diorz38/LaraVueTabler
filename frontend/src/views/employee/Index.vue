@@ -72,10 +72,10 @@
                     <router-link :to="{
                       name : 'employee.edit' ,
                       params : {id :employee.id}
-                    }" class="btn btn-sm btn-outline-info shadow-sm m-1">Edit
+                    }" class="btn btn-sm btn-outline-info">Edit
                     </router-link>
 
-                    <button type="button" class="btn btn-sm btn-outline-danger shadow-sm m-1" @click.prevent="onDelete(employee.id, index)">Delete</button>
+                    <button type="button" class="btn btn-sm btn-outline-danger" @click.prevent="onDelete(employee.id, index)">Delete</button>
                   </div>
                 </td>
               </tr>

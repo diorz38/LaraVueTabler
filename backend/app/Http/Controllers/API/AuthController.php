@@ -31,4 +31,8 @@ class AuthController extends BaseController
         }
         return $this->sendErrorResponse('Unauthorized', [] , Response::HTTP_UNAUTHORIZED);
     }
+    public function logout(){
+        $user = Auth::user()->token();
+        $user->revoke();
+    }
 }
