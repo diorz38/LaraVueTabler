@@ -1,4 +1,4 @@
-import { _ as _createClass, a as _classCallCheck } from '../_rollupPluginBabelHelpers-74ba0139.js';
+import { _ as _createClass, a as _classCallCheck } from '../_rollupPluginBabelHelpers-a0b34764.js';
 
 /** Provides details of continuous extracted tail */
 var ContinuousTailDetails = /*#__PURE__*/function () {
@@ -61,4 +61,4 @@ var ContinuousTailDetails = /*#__PURE__*/function () {
   return ContinuousTailDetails;
 }();
 
-export default ContinuousTailDetails;
+export { ContinuousTailDetails as default };

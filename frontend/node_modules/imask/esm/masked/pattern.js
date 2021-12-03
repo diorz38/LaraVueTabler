@@ -1,4 +1,4 @@
-import { d as _inherits, e as _createSuper, a as _classCallCheck, _ as _createClass, g as _get, h as _getPrototypeOf, b as _objectWithoutProperties, i as _set } from '../_rollupPluginBabelHelpers-74ba0139.js';
+import { d as _inherits, e as _createSuper, a as _classCallCheck, _ as _createClass, g as _get, h as _getPrototypeOf, b as _objectWithoutProperties, i as _set } from '../_rollupPluginBabelHelpers-a0b34764.js';
 import { DIRECTION, forceDirection } from '../core/utils.js';
 import ChangeDetails from '../core/change-details.js';
 import Masked from './base.js';
@@ -708,4 +708,4 @@ function isInput(block) {
 
 IMask.MaskedPattern = MaskedPattern;
 
-export default MaskedPattern;
+export { MaskedPattern as default };

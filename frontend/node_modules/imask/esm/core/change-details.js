@@ -1,4 +1,4 @@
-import { _ as _createClass, a as _classCallCheck } from '../_rollupPluginBabelHelpers-74ba0139.js';
+import { _ as _createClass, a as _classCallCheck } from '../_rollupPluginBabelHelpers-a0b34764.js';
 
 /**
   Provides details of changing model value
@@ -53,4 +53,4 @@ var ChangeDetails = /*#__PURE__*/function () {
   return ChangeDetails;
 }();
 
-export default ChangeDetails;
+export { ChangeDetails as default };

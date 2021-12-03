@@ -11,4 +11,4 @@ function IMask(el) {
   return new IMask.InputMask(el, opts);
 }
 
-export default IMask;
+export { IMask as default };

@@ -1,4 +1,4 @@
-import { _ as _createClass, a as _classCallCheck, b as _objectWithoutProperties } from '../../_rollupPluginBabelHelpers-74ba0139.js';
+import { _ as _createClass, a as _classCallCheck, b as _objectWithoutProperties } from '../../_rollupPluginBabelHelpers-a0b34764.js';
 import createMask from '../factory.js';
 import ChangeDetails from '../../core/change-details.js';
 import { DIRECTION } from '../../core/utils.js';
@@ -182,5 +182,4 @@ var PatternInputDefinition = /*#__PURE__*/function () {
   return PatternInputDefinition;
 }();
 
-export default PatternInputDefinition;
-export { DEFAULT_INPUT_DEFINITIONS };
+export { DEFAULT_INPUT_DEFINITIONS, PatternInputDefinition as default };

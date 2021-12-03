@@ -1,4 +1,4 @@
-import { _ as _createClass, a as _classCallCheck, b as _objectWithoutProperties } from '../_rollupPluginBabelHelpers-74ba0139.js';
+import { _ as _createClass, a as _classCallCheck, b as _objectWithoutProperties } from '../_rollupPluginBabelHelpers-a0b34764.js';
 import { objectIncludes, DIRECTION } from '../core/utils.js';
 import ActionDetails from '../core/action-details.js';
 import MaskedDate from '../masked/date.js';
@@ -199,9 +199,7 @@ var InputMask = /*#__PURE__*/function () {
 
   }, {
     key: "_saveSelection",
-    value: function _saveSelection()
-    /* ev */
-    {
+    value: function _saveSelection() {
       if (this.value !== this.el.value) {
         console.warn('Element value was changed outside of mask. Syncronize mask using `mask.updateValue()` to work properly.'); // eslint-disable-line no-console
       }
@@ -424,4 +422,4 @@ var InputMask = /*#__PURE__*/function () {
 }();
 IMask.InputMask = InputMask;
 
-export default InputMask;
+export { InputMask as default };

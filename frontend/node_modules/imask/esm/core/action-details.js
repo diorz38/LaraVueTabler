@@ -1,4 +1,4 @@
-import { _ as _createClass, a as _classCallCheck } from '../_rollupPluginBabelHelpers-74ba0139.js';
+import { _ as _createClass, a as _classCallCheck } from '../_rollupPluginBabelHelpers-a0b34764.js';
 import { DIRECTION } from './utils.js';
 
 /** Provides details of changing input */
@@ -113,4 +113,4 @@ var ActionDetails = /*#__PURE__*/function () {
   return ActionDetails;
 }();
 
-export default ActionDetails;
+export { ActionDetails as default };

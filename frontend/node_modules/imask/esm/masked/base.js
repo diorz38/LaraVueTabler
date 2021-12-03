@@ -1,4 +1,4 @@
-import { _ as _createClass, a as _classCallCheck } from '../_rollupPluginBabelHelpers-74ba0139.js';
+import { _ as _createClass, a as _classCallCheck } from '../_rollupPluginBabelHelpers-a0b34764.js';
 import ChangeDetails from '../core/change-details.js';
 import ContinuousTailDetails from '../core/continuous-tail-details.js';
 import { isString } from '../core/utils.js';
@@ -376,4 +376,4 @@ Masked.DEFAULTS = {
 };
 IMask.Masked = Masked;
 
-export default Masked;
+export { Masked as default };

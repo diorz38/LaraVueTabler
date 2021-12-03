@@ -1,4 +1,4 @@
-import { d as _inherits, e as _createSuper, a as _classCallCheck, _ as _createClass, g as _get, h as _getPrototypeOf, i as _set, b as _objectWithoutProperties } from '../_rollupPluginBabelHelpers-74ba0139.js';
+import { d as _inherits, e as _createSuper, a as _classCallCheck, _ as _createClass, g as _get, h as _getPrototypeOf, i as _set, b as _objectWithoutProperties } from '../_rollupPluginBabelHelpers-a0b34764.js';
 import ChangeDetails from '../core/change-details.js';
 import createMask from './factory.js';
 import Masked from './base.js';
@@ -353,4 +353,4 @@ MaskedDynamic.DEFAULTS = {
 };
 IMask.MaskedDynamic = MaskedDynamic;
 
-export default MaskedDynamic;
+export { MaskedDynamic as default };

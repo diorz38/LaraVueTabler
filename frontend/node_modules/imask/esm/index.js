@@ -15,7 +15,7 @@ export { default as MaskElement } from './controls/mask-element.js';
 export { default as HTMLMaskElement } from './controls/html-mask-element.js';
 export { default as HTMLContenteditableMaskElement } from './controls/html-contenteditable-mask-element.js';
 export { PIPE_TYPE, createPipe, pipe } from './masked/pipe.js';
-import './_rollupPluginBabelHelpers-74ba0139.js';
+import './_rollupPluginBabelHelpers-a0b34764.js';
 import './core/utils.js';
 import './core/action-details.js';
 import './core/change-details.js';

@@ -1,4 +1,4 @@
-import { d as _inherits, e as _createSuper, a as _classCallCheck, _ as _createClass, g as _get, h as _getPrototypeOf } from '../_rollupPluginBabelHelpers-74ba0139.js';
+import { d as _inherits, e as _createSuper, a as _classCallCheck, _ as _createClass, g as _get, h as _getPrototypeOf } from '../_rollupPluginBabelHelpers-a0b34764.js';
 import Masked from './base.js';
 import IMask from '../core/holder.js';
 import '../core/change-details.js';
@@ -36,4 +36,4 @@ var MaskedFunction = /*#__PURE__*/function (_Masked) {
 }(Masked);
 IMask.MaskedFunction = MaskedFunction;
 
-export default MaskedFunction;
+export { MaskedFunction as default };

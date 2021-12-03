@@ -1,4 +1,4 @@
-import { d as _inherits, e as _createSuper, a as _classCallCheck, _ as _createClass } from '../_rollupPluginBabelHelpers-74ba0139.js';
+import { d as _inherits, e as _createSuper, a as _classCallCheck, _ as _createClass } from '../_rollupPluginBabelHelpers-a0b34764.js';
 import HTMLMaskElement from './html-mask-element.js';
 import IMask from '../core/holder.js';
 import './mask-element.js';
@@ -78,4 +78,4 @@ var HTMLContenteditableMaskElement = /*#__PURE__*/function (_HTMLMaskElement) {
 }(HTMLMaskElement);
 IMask.HTMLContenteditableMaskElement = HTMLContenteditableMaskElement;
 
-export default HTMLContenteditableMaskElement;
+export { HTMLContenteditableMaskElement as default };

@@ -1,4 +1,4 @@
-import { d as _inherits, e as _createSuper, a as _classCallCheck, _ as _createClass, g as _get, h as _getPrototypeOf, f as _slicedToArray, i as _set } from '../_rollupPluginBabelHelpers-74ba0139.js';
+import { d as _inherits, e as _createSuper, a as _classCallCheck, _ as _createClass, g as _get, h as _getPrototypeOf, f as _slicedToArray, i as _set } from '../_rollupPluginBabelHelpers-a0b34764.js';
 import { escapeRegExp, DIRECTION } from '../core/utils.js';
 import ChangeDetails from '../core/change-details.js';
 import Masked from './base.js';
@@ -282,9 +282,7 @@ var MaskedNumber = /*#__PURE__*/function (_Masked) {
       if (valid) {
         // validate as number
         var number = this.number;
-        valid = valid && !isNaN(number) && ( // check min bound for negative values
-        this.min == null || this.min >= 0 || this.min <= this.number) && ( // check max bound for positive values
-        this.max == null || this.max <= 0 || this.number <= this.max);
+        valid = valid && !isNaN(number) && (this.min == null || this.min >= 0 || this.min <= this.number) && (this.max == null || this.max <= 0 || this.number <= this.max);
       }
 
       return valid && _get(_getPrototypeOf(MaskedNumber.prototype), "doValidate", this).call(this, flags);
@@ -403,4 +401,4 @@ MaskedNumber.DEFAULTS = {
 };
 IMask.MaskedNumber = MaskedNumber;
 
-export default MaskedNumber;
+export { MaskedNumber as default };

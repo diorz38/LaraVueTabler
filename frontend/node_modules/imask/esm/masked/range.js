@@ -1,4 +1,4 @@
-import { d as _inherits, e as _createSuper, a as _classCallCheck, _ as _createClass, g as _get, h as _getPrototypeOf, f as _slicedToArray } from '../_rollupPluginBabelHelpers-74ba0139.js';
+import { d as _inherits, e as _createSuper, a as _classCallCheck, _ as _createClass, g as _get, h as _getPrototypeOf, f as _slicedToArray } from '../_rollupPluginBabelHelpers-a0b34764.js';
 import MaskedPattern from './pattern.js';
 import IMask from '../core/holder.js';
 import '../core/utils.js';
@@ -154,4 +154,4 @@ var MaskedRange = /*#__PURE__*/function (_MaskedPattern) {
 }(MaskedPattern);
 IMask.MaskedRange = MaskedRange;
 
-export default MaskedRange;
+export { MaskedRange as default };

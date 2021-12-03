@@ -1,4 +1,4 @@
-import { d as _inherits, e as _createSuper, a as _classCallCheck, _ as _createClass } from '../_rollupPluginBabelHelpers-74ba0139.js';
+import { d as _inherits, e as _createSuper, a as _classCallCheck, _ as _createClass } from '../_rollupPluginBabelHelpers-a0b34764.js';
 import MaskElement from './mask-element.js';
 import IMask from '../core/holder.js';
 
@@ -146,4 +146,4 @@ HTMLMaskElement.EVENTS_MAP = {
 };
 IMask.HTMLMaskElement = HTMLMaskElement;
 
-export default HTMLMaskElement;
+export { HTMLMaskElement as default };

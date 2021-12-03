@@ -1,6 +1,6 @@
 import { isString } from '../core/utils.js';
 import IMask from '../core/holder.js';
-import '../_rollupPluginBabelHelpers-74ba0139.js';
+import '../_rollupPluginBabelHelpers-a0b34764.js';
 
 /** Get Masked class by mask type */
 
@@ -45,5 +45,4 @@ function createMask(opts) {
 }
 IMask.createMask = createMask;
 
-export default createMask;
-export { maskedClass };
+export { createMask as default, maskedClass };

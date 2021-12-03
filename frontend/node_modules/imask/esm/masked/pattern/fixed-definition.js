@@ -1,4 +1,4 @@
-import { _ as _createClass, a as _classCallCheck } from '../../_rollupPluginBabelHelpers-74ba0139.js';
+import { _ as _createClass, a as _classCallCheck } from '../../_rollupPluginBabelHelpers-a0b34764.js';
 import ChangeDetails from '../../core/change-details.js';
 import { DIRECTION, isString } from '../../core/utils.js';
 import ContinuousTailDetails from '../../core/continuous-tail-details.js';
@@ -139,4 +139,4 @@ var PatternFixedDefinition = /*#__PURE__*/function () {
   return PatternFixedDefinition;
 }();
 
-export default PatternFixedDefinition;
+export { PatternFixedDefinition as default };

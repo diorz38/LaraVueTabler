@@ -1,4 +1,4 @@
-import { _ as _createClass, a as _classCallCheck } from '../_rollupPluginBabelHelpers-74ba0139.js';
+import { _ as _createClass, a as _classCallCheck } from '../_rollupPluginBabelHelpers-a0b34764.js';
 import IMask from '../core/holder.js';
 
 /**
@@ -81,4 +81,4 @@ var MaskElement = /*#__PURE__*/function () {
 }();
 IMask.MaskElement = MaskElement;
 
-export default MaskElement;
+export { MaskElement as default };

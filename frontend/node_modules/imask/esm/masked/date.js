@@ -1,4 +1,4 @@
-import { d as _inherits, e as _createSuper, a as _classCallCheck, _ as _createClass, f as _slicedToArray, g as _get, h as _getPrototypeOf, i as _set } from '../_rollupPluginBabelHelpers-74ba0139.js';
+import { d as _inherits, e as _createSuper, a as _classCallCheck, _ as _createClass, f as _slicedToArray, g as _get, h as _getPrototypeOf, i as _set } from '../_rollupPluginBabelHelpers-a0b34764.js';
 import MaskedPattern from './pattern.js';
 import MaskedRange from './range.js';
 import IMask from '../core/holder.js';
@@ -163,4 +163,4 @@ MaskedDate.GET_DEFAULT_BLOCKS = function () {
 
 IMask.MaskedDate = MaskedDate;
 
-export default MaskedDate;
+export { MaskedDate as default };

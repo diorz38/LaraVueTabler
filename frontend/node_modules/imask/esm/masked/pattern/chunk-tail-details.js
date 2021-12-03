@@ -1,4 +1,4 @@
-import { _ as _createClass, a as _classCallCheck, b as _objectWithoutProperties } from '../../_rollupPluginBabelHelpers-74ba0139.js';
+import { _ as _createClass, a as _classCallCheck, b as _objectWithoutProperties } from '../../_rollupPluginBabelHelpers-a0b34764.js';
 import ChangeDetails from '../../core/change-details.js';
 import { isString } from '../../core/utils.js';
 import ContinuousTailDetails from '../../core/continuous-tail-details.js';
@@ -30,8 +30,7 @@ var ChunksTailDetails = /*#__PURE__*/function () {
       if (!String(tailChunk)) return;
       if (isString(tailChunk)) tailChunk = new ContinuousTailDetails(String(tailChunk));
       var lastChunk = this.chunks[this.chunks.length - 1];
-      var extendLast = lastChunk && ( // if stops are same or tail has no stop
-      lastChunk.stop === tailChunk.stop || tailChunk.stop == null) && // if tail chunk goes just after last chunk
+      var extendLast = lastChunk && (lastChunk.stop === tailChunk.stop || tailChunk.stop == null) && // if tail chunk goes just after last chunk
       tailChunk.from === lastChunk.from + lastChunk.toString().length;
 
       if (tailChunk instanceof ContinuousTailDetails) {
@@ -82,8 +81,7 @@ var ChunksTailDetails = /*#__PURE__*/function () {
         var stop = chunk.stop;
         var chunkBlock = void 0;
 
-        if (stop != null && ( // if block not found or stop is behind lastBlock
-        !lastBlockIter || lastBlockIter.index <= stop)) {
+        if (stop != null && (!lastBlockIter || lastBlockIter.index <= stop)) {
           if (chunk instanceof ChunksTailDetails || // for continuous block also check if stop is exist
           masked._stops.indexOf(stop) >= 0) {
             details.aggregate(masked._appendPlaceholder(stop));
@@ -166,4 +164,4 @@ var ChunksTailDetails = /*#__PURE__*/function () {
   return ChunksTailDetails;
 }();
 
-export default ChunksTailDetails;
+export { ChunksTailDetails as default };
