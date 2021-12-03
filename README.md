@@ -20,7 +20,7 @@
 - db seed => `php artisan db:seed`  
 - run `php artisan passport:install`
 - run `php artisan serve --port 8000`
-- open new terminal and gi to frontend dir => `cd ../frontend`
+- open new terminal and go to frontend dir => `cd ../frontend`
 - run `npm install`
 - run `npm run dev`
   
