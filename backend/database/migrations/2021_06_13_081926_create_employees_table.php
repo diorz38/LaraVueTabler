@@ -33,6 +33,6 @@ class CreateEmployeesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('karyawans');
+        Schema::dropIfExists('employees');
     }
 }

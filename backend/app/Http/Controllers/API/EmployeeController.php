@@ -58,10 +58,14 @@ class EmployeeController extends BaseController
         if($validator->fails()){
             return $this->sendErrorValidationResponse('Validation Error.', $validator->errors());
         }
+        // if ($user->hasRole('admin')) { // you can pass an id or slug
+            $employee = Employee::create($input);
+            return $this->sendSuccessResponse(new EmployeeResource($employee), 'Employee saved successfully.');
+        // }else{
+        //     $employee = null;
+        //     return $this->sendSuccessResponse(new EmployeeResource($employee), 'You have no acess.');
 
-        $product = Employee::create($input);
-
-        return $this->sendSuccessResponse(new EmployeeResource($product), 'Employee saved successfully.');
+        // }
     }
 
     /**
@@ -120,17 +124,16 @@ class EmployeeController extends BaseController
         if($validator->fails()){
             return $this->sendErrorValidationResponse('Validation Error.', $validator->errors() );
         }
+            $employee->first_name = $input['first_name'];
+            $employee->last_name = $input['last_name'];
+            $employee->email = $input['email'];
+            $employee->phone_number = $input['phone_number'];
+            $employee->department_name = $input['department_name'];
+            $employee->start_date = $input['start_date'];
+            $employee->end_date = $input['end_date'];
+            $employee->save();
 
-        $employee->first_name = $input['first_name'];
-        $employee->last_name = $input['last_name'];
-        $employee->email = $input['email'];
-        $employee->phone_number = $input['phone_number'];
-        $employee->department_name = $input['department_name'];
-        $employee->start_date = $input['start_date'];
-        $employee->end_date = $input['end_date'];
-        $employee->save();
-
-        return $this->sendSuccessResponse(new EmployeeResource($employee), 'Employee updated successfully.');
+            return $this->sendSuccessResponse(new EmployeeResource($employee), 'Employee updated successfully.');
 
     }
 

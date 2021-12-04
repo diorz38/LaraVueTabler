@@ -49,7 +49,10 @@ class UserController extends BaseController
     public function show(User $user)
     {
         $user = Auth::user();
-        return $this->sendSuccessResponse($user , 'User retrieved successfully.');
+        $role = $user->roles;
+        $myrole = collect($user->roles[0]);
+        $merged = collect($user)->merge($myrole);
+        return $this->sendSuccessResponse($merged , 'User retrieved successfully.');
     }
 
     /**
