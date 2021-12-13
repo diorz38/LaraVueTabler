@@ -8,6 +8,7 @@ import "@tabler/core/dist/js/tabler.min.js"
 import "@tabler/core/dist/js/demo.min.js"
 import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue';
 import { Ziggy } from '../../vendor/tightenco/ziggy';
+import VueApexCharts from "vue3-apexcharts";
 
 InertiaProgress.init({
     color: "red",
@@ -29,6 +30,7 @@ createInertiaApp({
         createApp({ render: () => h(App, props) })
             .use(plugin)
             .use(ZiggyVue, Ziggy)
+            .use(VueApexCharts)
             .component("Link", Link)
             .component("Head", Head)
             .mount(el);

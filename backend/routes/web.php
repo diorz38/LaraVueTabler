@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\JafungController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('login', [LoginController::class, 'create'])->name('login');
@@ -17,4 +18,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/users/{id}/edit', [UsersController::class, 'edit']);
     Route::post('/users', [UsersController::class, 'store']);
     Route::put('/user', [UsersController::class, 'update']);
+
+    Route::get('jafungs', [JafungController::class, 'index'])->name('jafung.index');
+
 });
