@@ -5,31 +5,11 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
-                <a href=".">
-                    <img src="static/logo.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image" />
+                <a :href="route('home')"><Logo /> Prakom
                 </a>
             </h1>
             <div class="navbar-nav flex-row order-md-last">
-                <div class="nav-item d-none d-md-flex me-3">
-                    <div class="btn-list">
-                        <a href="https://github.com/tabler/tabler" class="btn btn-outline-white" target="_blank" rel="noreferrer">
-                            <!-- Download SVG icon from http://tabler-icons.io/i/brand-github -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon text-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-                            </svg>
-                            Source code
-                        </a>
-                        <a href="https://github.com/sponsors/codecalm" class="btn btn-outline-white" target="_blank" rel="noreferrer">
-                            <!-- Download SVG icon from http://tabler-icons.io/i/heart -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon text-pink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                            </svg>
-                            Sponsor
-                        </a>
-                    </div>
-                </div>
+
                 <div class="nav-item dropdown d-none d-md-flex me-3">
                     <a href="#" class="nav-link px-0" data-bs-toggle="dropdown" tabindex="-1" aria-label="Show notifications">
                         <!-- Download SVG icon from http://tabler-icons.io/i/bell -->
@@ -73,30 +53,30 @@
             <div class="navbar navbar-light">
                 <div class="container-xl">
                     <ul class="navbar-nav">
-                        <NavLink href="/" :active="$page.component === 'Home'">
+                        <NavLink :href="route('dashboard')" :active="$page.component === 'Home'" class="nav-item">
                             <span class="nav-link-icon d-md-none d-lg-inline-block"
                                 ><!-- Download SVG icon from http://tabler-icons.io/i/home -->
                                 <IconHome />
                             </span>
                             <span class="nav-link-title"> Home </span>
                         </NavLink>
-                        <li class="nav-item dropdown" :active="$page.component === 'Projects/Yearly' || $page.component === 'Projects/Tasks'">
+                        <NavDrop :active="$page.component === 'Jafung/Index'" class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" role="button" cursor="pointer" aria-expanded="false">
                                 <span class="nav-link-icon d-md-none d-lg-inline-block"
                                     ><!-- Download SVG icon from http://tabler-icons.io/i/package -->
                                     <IconBox />
                                 </span>
-                                <span class="nav-link-title"> Kegiatan </span>
+                                <span class="nav-link-title"> Prakom </span>
                             </a>
                             <div class="dropdown-menu">
                                 <div class="dropdown-menu-columns">
                                     <div class="dropdown-menu-column">
-                                        <NavLinkDrop href="./empty.html" cursor="pointer" class="dropdown-item" :active="$page.component === '*Yearly'"> Tahun Ini </NavLinkDrop>
-                                        <NavLinkDrop href="./empty.html" cursor="pointer" class="dropdown-item" :active="$page.component === '*Tasks'"> Sub Kegiatan </NavLinkDrop>
+                                        <NavLinkDrop :href="route('jafung.index','ahli')" cursor="pointer" class="dropdown-item" :active="$page.url === '/jafungs/ahli'"> Ahli </NavLinkDrop>
+                                        <NavLinkDrop :href="route('jafung.index','terampil')" cursor="pointer" class="dropdown-item" :active="$page.url === '/jafungs/terampil'"> Terampil </NavLinkDrop>
                                     </div>
                                 </div>
                             </div>
-                        </li>
+                        </NavDrop>
                         <NavLink href="/docs" :active="$page.component === 'Docs'">
                             <span class="nav-link-icon d-md-none d-lg-inline-block"
                                 ><!-- Download SVG icon from http://tabler-icons.io/i/file-text -->
@@ -105,16 +85,6 @@
                             <span class="nav-link-title"> Documentation </span>
                         </NavLink>
                     </ul>
-                    <div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last">
-                        <form action="." method="get">
-                            <div class="input-icon">
-                                <span class="input-icon-addon">
-                                    <IconSearch />
-                                </span>
-                                <input type="text" class="form-control" placeholder="Search…" aria-label="Search in website" />
-                            </div>
-                        </form>
-                    </div>
                 </div>
             </div>
         </div>
@@ -203,13 +173,15 @@
 <script>
 import NavLink from './NavLink'
 import NavLinkDrop from './NavLinkDrop'
+import NavDrop from './NavDrop'
 import IconHome from './IconHome'
 import IconBox from './IconBox'
 import IconSearch from './IconSearch'
 import IconDoc from './IconDoc'
+import Logo from './Logo'
 
 export default {
-    components: { NavLink, NavLinkDrop, IconHome, IconBox, IconSearch, IconDoc },
+    components: { NavLink, NavLinkDrop, NavDrop, IconHome, IconBox, IconSearch, IconDoc,Logo },
     computed: {
         nama() {
             return this.$page.props.auth.user.name

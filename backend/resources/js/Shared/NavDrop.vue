@@ -1,5 +1,5 @@
 <template>
-    <Link class="dropdown-item" :class="{ 'dropdown-item active': active }"><slot /></Link>
+    <li class="nav-item dropdown" :class="{ 'nav-item dropdown active': active }"><slot /></li>
 </template>
 
 <script>

@@ -15,7 +15,7 @@ class JafungController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function index()
+    public function index($klas = null)
     {
         // TODO: REGEX untuk split text setiap nomor
         // $text = "Laporan pemenuhan permintaan dan layanan TI mencakup namun tidak terbatas pada:
@@ -25,17 +25,31 @@ class JafungController extends Controller
         // 4. informasi ketersediaan dan cara mendapatkan layanan.";
         // $keywords = preg_split("/[0-9]+[.]/", $text);
         // return $keywords[3];
+        if(!$klas){
+            $jafungs = Jafung::query()->where('klasifikasi',$klasifikasi)
+            ->when(Request::input('search'), function ($query, $search) {
+                $query->where('unsur', 'like', "%{$search}%")
+                ->orWhere('sub_unsur', 'like', "%{$search}%")
+                ->orWhere('uraian_kegiatan', 'like', "%{$search}%")
+                ->orWhere('output', 'like', "%{$search}%");
+            })
+            ->paginate(6);
+
+        }else{
+            $klasifikasi = ucfirst($klas);
+            $jafungs = Jafung::query()->where('klasifikasi',$klasifikasi)
+            ->when(Request::input('search'), function ($query, $search) {
+                $query->where('unsur', 'like', "%{$search}%")
+                ->orWhere('sub_unsur', 'like', "%{$search}%")
+                ->orWhere('uraian_kegiatan', 'like', "%{$search}%")
+                ->orWhere('output', 'like', "%{$search}%");
+            })
+            ->paginate(6);
+        }
 
 
-        $jafungs = Jafung::query()
-        ->when(Request::input('search'), function ($query, $search) {
-            $query->where('unsur', 'like', "%{$search}%")
-            ->orWhere('sub_unsur', 'like', "%{$search}%")
-            ->orWhere('uraian_kegiatan', 'like', "%{$search}%")
-            ->orWhere('output', 'like', "%{$search}%");
-        })
-        ->paginate(6)
-        ->withQueryString()
+        // $jafungs = Jafung::query()
+        $jafungs->withQueryString()
         ->through(fn($jafung) => [
             'id' => $jafung->id,
             'klasifikasi' => $jafung->klasifikasi,

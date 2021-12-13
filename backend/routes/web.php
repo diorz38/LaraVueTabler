@@ -10,8 +10,9 @@ Route::post('login', [LoginController::class, 'store']);
 Route::post('logout', [LoginController::class, 'destroy'])->middleware('auth')->name('logout');
 
 Route::middleware('auth')->group(function () {
-    Route::inertia('/', 'Home');
-    Route::inertia('/settings', 'Settings');
+    Route::inertia('/', 'Home')->name('home');
+    Route::inertia('/dashboard', 'Dashboard')->name('dashboard');
+    Route::inertia('/settings', 'Settings')->name('settings');
 
     Route::get('/users', [UsersController::class, 'index']);
     Route::get('/users/create', [UsersController::class, 'create']);
@@ -19,6 +20,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/users', [UsersController::class, 'store']);
     Route::put('/user', [UsersController::class, 'update']);
 
-    Route::get('jafungs', [JafungController::class, 'index'])->name('jafung.index');
+    Route::get('jafungs/{klas?}', [JafungController::class, 'index'])->name('jafung.index');
 
 });
