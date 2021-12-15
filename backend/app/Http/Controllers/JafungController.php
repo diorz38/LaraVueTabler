@@ -17,14 +17,6 @@ class JafungController extends Controller
      */
     public function index($klas = null)
     {
-        // TODO: REGEX untuk split text setiap nomor
-        // $text = "Laporan pemenuhan permintaan dan layanan TI mencakup namun tidak terbatas pada:
-        // 1. banyaknya permintaan layanan yang dipenuhi;
-        // 2. jenis layanan yang diminta dan penjelasan rincinya;
-        // 3. sarana yang digunakan; dan
-        // 4. informasi ketersediaan dan cara mendapatkan layanan.";
-        // $keywords = preg_split("/[0-9]+[.]/", $text);
-        // return $keywords[3];
         if(!$klas){
             $jafungs = Jafung::query()->where('klasifikasi',$klasifikasi)
             ->when(Request::input('search'), function ($query, $search) {
@@ -119,13 +111,52 @@ class JafungController extends Controller
      */
     public function show($id)
     {
-        $employee = Employee::find($id);
-        if (empty($employee)) {
-            return $this->sendErrorResponse("Employee not found");
-        }
 
-        return $this->sendSuccessResponse(new EmployeeResource($employee), "Employee retrieved successfully.");
+        $jafungs = Jafung::where('id',$id)->first();
 
+        // TODO: REGEX untuk split text setiap nomor
+        $text1 = $jafungs->deskripsi;
+        $text2 = $jafungs->bukti_fisik;
+
+        $deskripsi_keg = preg_split("/[0-9]+[.]/", $text1);
+        $buktiFisik = preg_split("/[0-9]+[.]/", $text2);
+        // return $buktiFisik;
+        // return array_merge([
+        //     'desc' => $keywords,
+        //     'jafung' => $jafungs,
+        //     ]);
+        // collect($jafungs)->through(fn ($jafungs) => [
+        //     'id' => $jafungs->id,
+        //     'klasifikasi' => $jafungs->klasifikasi,
+        //     'no' => $jafungs->no,
+        //     'unsur' => $jafungs->unsur,
+        //     'sub_kode' => $jafungs->sub_kode,
+        //     'sub_unsur' => $jafungs->sub_unsur,
+        //     'no_keg' => $jafungs->no_keg,
+        //     // 'organization' => $contact->organization ? $contact->organization->only('name') : null,
+        // ]);
+
+        // ->map([
+        //     'id' => $jafungs->id,
+        //     'klasifikasi' => $jafungs->klasifikasi,
+        //     'no' => $jafungs->no,
+        //     'unsur' => $jafungs->unsur,
+        //     'sub_kode' => $jafungs->sub_kode,
+        //     'sub_unsur' => $jafungs->sub_unsur,
+        //     'no_keg' => $jafungs->no_keg,
+        //     'uraian_kegiatan' => $keywords,
+        //     'sub_unsur' => $jafungs->sub_unsur,
+        //     'output' => $jafungs->output,
+        //     'angka_kredit' => $jafungs->angka_kredit,
+        //     'butir' => $jafungs->butir,
+        //     'pelaksana' => $jafungs->pelaksana,
+        // ]);
+        // return jafungs;
+        return Inertia::render('Jafung/Show', [
+            'jafungs' => $jafungs,
+            'dekripsiKeg' => $deskripsi_keg,
+            'buktiFisik' => $buktiFisik,
+        ]);
     }
 
     /**

@@ -21,5 +21,6 @@ Route::middleware('auth')->group(function () {
     Route::put('/user', [UsersController::class, 'update']);
 
     Route::get('jafungs/{klas?}', [JafungController::class, 'index'])->name('jafung.index');
+    Route::get('jafungs/{id}/show', [JafungController::class, 'show'])->name('jafung.show');
 
 });

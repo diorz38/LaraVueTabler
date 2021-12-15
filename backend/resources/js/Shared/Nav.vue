@@ -1,4 +1,5 @@
 <template>
+<div>
     <header class="navbar navbar-expand-md navbar-light d-print-none">
         <div class="container-xl">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
@@ -88,6 +89,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- <nav class="mt-6">
     <div>
