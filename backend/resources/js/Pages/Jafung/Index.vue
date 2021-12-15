@@ -1,4 +1,5 @@
 <template>
+<div>
     <div class="container-xl">
         <!-- Page title -->
         <div class="page-header d-print-none">
@@ -128,6 +129,7 @@
             </div>
         </div>
     </div>
+</div>
 </template>
 <script setup>
 import Pagination from '../../Shared/Pagination'
