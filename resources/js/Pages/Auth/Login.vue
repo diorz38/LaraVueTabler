@@ -75,6 +75,6 @@ let form = useForm({
 
 let submit = () => {
     console.log(form)
-    form.post('/login')
+    form.post(route('login.store'))
 }
 </script>
