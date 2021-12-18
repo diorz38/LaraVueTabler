@@ -17,31 +17,16 @@ class JafungController extends Controller
      */
     public function index($klas = null)
     {
-        if(!$klas){
-            $jafungs = Jafung::query()->where('klasifikasi',$klasifikasi)
-            ->when(Request::input('search'), function ($query, $search) {
-                $query->where('unsur', 'like', "%{$search}%")
-                ->orWhere('sub_unsur', 'like', "%{$search}%")
-                ->orWhere('uraian_kegiatan', 'like', "%{$search}%")
-                ->orWhere('output', 'like', "%{$search}%");
-            })
-            ->paginate(6);
-
-        }else{
+        if($klas){
             $klasifikasi = ucfirst($klas);
-            $jafungs = Jafung::query()->where('klasifikasi',$klasifikasi)
-            ->when(Request::input('search'), function ($query, $search) {
-                $query->where('unsur', 'like', "%{$search}%")
-                ->orWhere('sub_unsur', 'like', "%{$search}%")
-                ->orWhere('uraian_kegiatan', 'like', "%{$search}%")
-                ->orWhere('output', 'like', "%{$search}%");
-            })
-            ->paginate(6);
         }
-
-
-        // $jafungs = Jafung::query()
-        $jafungs->withQueryString()
+        $jafungs = Jafung::query()->where('klasifikasi',$klasifikasi)
+        ->when(Request::input('search'), function ($query, $search) {
+            $query->where('unsur', 'like', "%{$search}%")
+            ->orWhere('sub_unsur', 'like', "%{$search}%")
+            ->orWhere('uraian_kegiatan', 'like', "%{$search}%")
+            ->orWhere('output', 'like', "%{$search}%");
+        })->paginate(6)->withQueryString()
         ->through(fn($jafung) => [
             'id' => $jafung->id,
             'klasifikasi' => $jafung->klasifikasi,
