@@ -1,32 +1,19 @@
 {
-    "private": true,
-    "scripts": {
-        "dev": "npm run development",
-        "development": "mix",
-        "watch": "mix watch",
-        "watch-poll": "mix watch -- --watch-options-poll=1000",
-        "hot": "mix watch --hot",
-        "prod": "npm run production",
-        "production": "mix --production"
-    },
-    "devDependencies": {
-        "@tabler/core": "^1.0.0-beta5",
-        "@vue/compiler-sfc": "^3.2.19",
-        "axios": "^0.21",
-        "eslint": "^7.32.0",
-        "eslint-plugin-vue": "^7.19.0",
-        "laravel-mix": "^6.0.6",
-        "lodash": "^4.17.19",
-        "postcss": "^8.1.14",
-        "vue-loader": "^16.8.1",
-        "webpack": "^5.65.0"
-    },
-    "dependencies": {
-        "@inertiajs/inertia": "^0.10.1",
-        "@inertiajs/inertia-vue3": "^0.5.2",
-        "@inertiajs/progress": "^0.2.6",
-        "apexcharts": "^3.32.0",
-        "vue": "^3.2.19",
-        "vue3-apexcharts": "^1.4.1"
-    }
+  "name": "smartkit-client",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tabler/core": "^1.0.0-beta5",
+    "axios": "^0.24.0",
+    "vue": "^3.2.23",
+    "vue-router": "^4.0.12"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.10.2",
+    "vite": "^2.7.0"
+  }
 }
