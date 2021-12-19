@@ -68,19 +68,14 @@
                                     <tr>
                                         <th class="w-1"><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select all invoices" /></th>
                                         <th class="w-1">
-                                            Butir
-                                            <!-- Download SVG icon from http://tabler-icons.io/i/chevron-up -->
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-sm text-dark icon-thick" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                <polyline points="6 15 12 9 18 15" />
-                                            </svg>
+                                            Butir<ChevronUpIcon class="icon icon-sm text-dark icon-thick" />
                                         </th>
                                         <th>Uraian Kegiatan</th>
                                         <th>Output</th>
                                         <th>Angka<br>Kredit</th>
                                         <!-- <th>Status</th>
                                         <th>Price</th> -->
-                                        <th></th>
+                                        <!-- <th></th> -->
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -89,11 +84,11 @@
                                         <td><span class="text-muted">{{ item.butir }}</span></td>
                                         <td>
                                             <div class="col">
-                                                <div class="badge bg-cyan-lt mb-1 text-sm">{{ item.unsur }}</div>
+                                                <div class="badge bg-cyan-lt mb-1 text-sm tracking-tight">{{ item.unsur }}</div>
                                                 <div>
-                                                    <Link :href="route('jafung.show',item.id)" class="text-wrap">{{ item.uraian_kegiatan }}</Link>
+                                                    <Link :href="route('jafung.show',item.id)" class="text-wrap text-reset">{{ item.uraian_kegiatan }}</Link>
                                                 </div>
-                                                <div class="badge bg-lime-lt">{{ item.sub_unsur }}</div>
+                                                <div class="badge bg-lime-lt text-sm tracking-tight">{{ item.sub_unsur }}</div>
                                             </div>
                                         </td>
                                         <td>
@@ -105,7 +100,7 @@
                                         <td>{{ item.angka_kredit }}</td>
                                         <!-- <td><span class="badge bg-success me-1"></span> Paid</td>
                                         <td>$887</td> -->
-                                        <td class="text-end">
+                                        <!-- <td class="text-end">
                                             <span class="dropdown">
                                                 <button class="btn dropdown-toggle btn-sm align-text-middle" data-bs-boundary="viewport" data-bs-toggle="dropdown">Actions</button>
                                                 <div class="dropdown-menu dropdown-menu-start">
@@ -113,7 +108,7 @@
                                                     <a class="dropdown-item" href="#"> Another action </a>
                                                 </div>
                                             </span>
-                                        </td>
+                                        </td> -->
                                     </tr>
                                 </tbody>
                             </table>
@@ -135,6 +130,7 @@ import FlashMessages from '../../Shared/FlashMessages'
 import { ref, watch } from 'vue'
 import { Inertia } from '@inertiajs/inertia'
 import debounce from 'lodash/debounce'
+import { ChevronUpIcon } from 'vue-tabler-icons'
 
 let props = defineProps({
   jafungs: Object,

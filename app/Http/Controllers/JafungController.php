@@ -105,38 +105,7 @@ class JafungController extends Controller
 
         $deskripsi_keg = preg_split("/[0-9]+[.]/", $text1);
         $buktiFisik = preg_split("/[0-9]+[.]/", $text2);
-        // return $buktiFisik;
-        // return array_merge([
-        //     'desc' => $keywords,
-        //     'jafung' => $jafungs,
-        //     ]);
-        // collect($jafungs)->through(fn ($jafungs) => [
-        //     'id' => $jafungs->id,
-        //     'klasifikasi' => $jafungs->klasifikasi,
-        //     'no' => $jafungs->no,
-        //     'unsur' => $jafungs->unsur,
-        //     'sub_kode' => $jafungs->sub_kode,
-        //     'sub_unsur' => $jafungs->sub_unsur,
-        //     'no_keg' => $jafungs->no_keg,
-        //     // 'organization' => $contact->organization ? $contact->organization->only('name') : null,
-        // ]);
 
-        // ->map([
-        //     'id' => $jafungs->id,
-        //     'klasifikasi' => $jafungs->klasifikasi,
-        //     'no' => $jafungs->no,
-        //     'unsur' => $jafungs->unsur,
-        //     'sub_kode' => $jafungs->sub_kode,
-        //     'sub_unsur' => $jafungs->sub_unsur,
-        //     'no_keg' => $jafungs->no_keg,
-        //     'uraian_kegiatan' => $keywords,
-        //     'sub_unsur' => $jafungs->sub_unsur,
-        //     'output' => $jafungs->output,
-        //     'angka_kredit' => $jafungs->angka_kredit,
-        //     'butir' => $jafungs->butir,
-        //     'pelaksana' => $jafungs->pelaksana,
-        // ]);
-        // return jafungs;
         return Inertia::render('Jafung/Show', [
             'jafungs' => $jafungs,
             'dekripsiKeg' => $deskripsi_keg,

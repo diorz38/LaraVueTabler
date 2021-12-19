@@ -6,7 +6,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <Link :href="route('home')" class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal">
-                    <img :src="getLogo()" height="42">
+                    <img :src="getLogo()" height="42" />
                     <span class="text-reset"> Jafung</span>
                 </Link>
 
@@ -24,7 +24,7 @@
                     </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
-                            <span class="avatar avatar-sm" :style="{'background-image':'url('+avatar+')'}"></span>
+                            <span class="avatar avatar-sm" :style="{ 'background-image': 'url(' + avatar + ')' }"></span>
                             <div class="d-none d-xl-block ps-2">
                                 <div>{{ nama }}</div>
                                 <div class="mt-1 small text-muted">{{ email }}</div>
@@ -89,10 +89,10 @@
 import NavLink from './NavLink'
 import NavLinkDrop from './NavLinkDrop'
 import NavDrop from './NavDrop'
-import { HomeIcon,BoxIcon,SearchIcon,NotebookIcon,BrandTablerIcon,BellIcon } from "vue-tabler-icons"
+import { HomeIcon, BoxIcon, SearchIcon, NotebookIcon, BrandTablerIcon, BellIcon } from 'vue-tabler-icons'
 
 export default {
-    components: { NavLink, NavLinkDrop, NavDrop, HomeIcon, BoxIcon, SearchIcon, NotebookIcon, BrandTablerIcon,BellIcon },
+    components: { NavLink, NavLinkDrop, NavDrop, HomeIcon, BoxIcon, SearchIcon, NotebookIcon, BrandTablerIcon, BellIcon },
     computed: {
         nama() {
             return this.$page.props.auth.user.name
@@ -109,8 +109,8 @@ export default {
             this.$inertia.post('/logout')
         },
         getLogo() {
-            return 'http://127.0.0.1:8000/static/smartkit_logo.png';
-        }
+            return 'http://127.0.0.1:8000/static/smartkit_logo.png'
+        },
     },
 }
 </script>
