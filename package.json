@@ -27,6 +27,7 @@
         "@inertiajs/progress": "^0.2.6",
         "apexcharts": "^3.32.0",
         "vue": "^3.2.19",
+        "vue-tabler-icons": "^2.1.0",
         "vue3-apexcharts": "^1.4.1"
     }
 }

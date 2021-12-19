@@ -1,5 +1,6 @@
 <?php
 
+use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
 use App\Http\Controllers\UsersController;
@@ -11,7 +12,7 @@ Route::post('login', [LoginController::class, 'store'])->name('login.store');
 Route::post('logout', [LoginController::class, 'destroy'])->middleware('auth')->name('logout');
 
 Route::middleware('auth')->group(function () {
-    Route::inertia('/', 'Home')->name('home');
+    Route::inertia('/home', 'Home')->name('home');
     Route::inertia('/dashboard', 'Dashboard')->name('dashboard');
     Route::inertia('/settings', 'Settings')->name('settings');
 
@@ -26,9 +27,7 @@ Route::middleware('auth')->group(function () {
 
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->name('dashboard');
+Route::get('/', function () { return redirect()->route('home'); });
 
 Route::get('/packages-info', function () {
     $metadata = json_decode(file_get_contents(base_path('package-lock.json')));
