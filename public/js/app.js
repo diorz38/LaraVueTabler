@@ -1883,8 +1883,61 @@ var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 var _hoisted_2 = {
   "class": "page-wrapper"
 };
+var _hoisted_3 = {
+  "class": "footer footer-transparent d-print-none"
+};
+var _hoisted_4 = {
+  "class": "container"
+};
+var _hoisted_5 = {
+  "class": "row text-center align-items-center flex-row-reverse"
+};
+var _hoisted_6 = {
+  "class": "col-lg-auto ms-lg-auto"
+};
+var _hoisted_7 = {
+  "class": "list-inline list-inline-dots mb-0"
+};
+var _hoisted_8 = {
+  "class": "list-inline-item"
+};
+var _hoisted_9 = {
+  href: "#php",
+  "class": "link-info"
+};
+var _hoisted_10 = {
+  "class": "list-inline-item"
+};
+var _hoisted_11 = {
+  href: "#laravel",
+  "class": "link-info"
+};
+var _hoisted_12 = {
+  "class": "list-inline-item"
+};
+var _hoisted_13 = {
+  href: "#vue",
+  "class": "link-info",
+  rel: "noopener"
+};
+var _hoisted_14 = {
+  "class": "list-inline-item"
+};
+var _hoisted_15 = {
+  href: "#inertia",
+  "class": "link-info",
+  rel: "noopener"
+};
+var _hoisted_16 = {
+  "class": "list-inline-item"
+};
+var _hoisted_17 = {
+  href: "#tabler",
+  "class": "link-info",
+  rel: "noopener"
+};
 
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<footer class=\"footer footer-transparent d-print-none\"><div class=\"container\"><div class=\"row text-center align-items-center flex-row-reverse\"><div class=\"col-lg-auto ms-lg-auto\"><ul class=\"list-inline list-inline-dots mb-0\"><li class=\"list-inline-item\"><a href=\"./docs/index.html\" class=\"link-secondary\">Documentation</a></li><li class=\"list-inline-item\"><a href=\"./license.html\" class=\"link-secondary\">License</a></li><li class=\"list-inline-item\"><a href=\"https://github.com/tabler/tabler\" target=\"_blank\" class=\"link-secondary\" rel=\"noopener\">Source code</a></li><li class=\"list-inline-item\"><a href=\"https://github.com/sponsors/codecalm\" target=\"_blank\" class=\"link-secondary\" rel=\"noopener\"><!-- Download SVG icon from http://tabler-icons.io/i/heart --><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"icon text-pink icon-filled icon-inline\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" stroke-width=\"2\" stroke=\"currentColor\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path><path d=\"M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572\"></path></svg> Sponsor </a></li></ul></div><div class=\"col-12 col-lg-auto mt-3 mt-lg-0\"><ul class=\"list-inline list-inline-dots mb-0\"><li class=\"list-inline-item\"> Copyright © 2021 <a href=\".\" class=\"link-secondary\">Tabler</a>. All rights reserved. </li><li class=\"list-inline-item\"><a href=\"./changelog.html\" class=\"link-secondary\" rel=\"noopener\">v</a></li></ul></div></div></div></footer>", 1);
+var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-12 col-lg-auto mt-3 mt-lg-0\"><ul class=\"list-inline list-inline-dots mb-0\"><li class=\"list-inline-item\"> Made with <span><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"icon text-pink icon-filled icon-inline\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" stroke-width=\"2\" stroke=\"currentColor\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path><path d=\"M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572\"></path></svg></span> © 2021 <a href=\"https://github.com/diorz38/LaraVueTabler/tree/Backend-v2.0\" target=\"_blank\" class=\"link-secondary\" rel=\"noopener\">LaraVueTabler</a>. All rights reserved. </li><!-- &lt;li class=&quot;list-inline-item&quot;&gt;\n                            &lt;a href=&quot;./changelog.html&quot; class=&quot;link-secondary&quot; rel=&quot;noopener&quot;&gt;v&lt;/a&gt;\n                        &lt;/li&gt; --></ul></div>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Head = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Head");
@@ -1898,7 +1951,17 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Nav), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default")]), _hoisted_3], 64
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Nav), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("footer", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <ul class=\"list-inline list-inline-dots mb-0\"> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.$page.props.appInfo.phpVersion), 1
+  /* TEXT */
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.$page.props.appInfo.laravelVersion), 1
+  /* TEXT */
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.$page.props.appInfo.vueVersion), 1
+  /* TEXT */
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.$page.props.appInfo.inertiaVersion), 1
+  /* TEXT */
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.$page.props.appInfo.tablerVersion), 1
+  /* TEXT */
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Download SVG icon from http://tabler-icons.io/i/heart "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <li class=\"list-inline-item\">\n                            <a href=\"https://github.com/sponsors/codecalm\" target=\"_blank\" class=\"link-secondary\" rel=\"noopener\">\n                                <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"icon text-pink icon-filled icon-inline\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" stroke-width=\"2\" stroke=\"currentColor\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                                    <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n                                    <path d=\"M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572\" />\n                                </svg>\n                                Sponsor\n                            </a>\n                        </li> ")])]), _hoisted_18])])])], 64
   /* STABLE_FRAGMENT */
   );
 }
