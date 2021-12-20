@@ -24,7 +24,7 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=String.prototype.startsWith" defer></script>
 </head>
 
-<body class="font-sans antialiased">
+<body class="antialiased">
     <div class="wrapper">
         @routes
         @inertia
