@@ -126,16 +126,14 @@ import { ChevronUpIcon } from 'vue-tabler-icons'
 let props = defineProps({
     jafungs: Object,
     filters: Object,
-    klas: String,
 })
 
 let search = ref(props.filters.search)
-let klas = props.klas
 
 watch(
     search,
     debounce(function (value) {
-        Inertia.get('/jafungs/'+klas+'/', { search: value }, { preserveState: true, replace: true })
+        Inertia.get('/jafungs/ahli', { search: value }, { preserveState: true, replace: true })
     }, 300),
 )
 </script>

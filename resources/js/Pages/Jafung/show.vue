@@ -53,19 +53,21 @@
                                         </div>
                                         <div v-else>
                                             <ul>
-                                                <li>{{ deskripsi_keg }}</li>
+                                                <li class="lh-sm">{{ deskripsi_keg }}</li>
                                             </ul>
                                         </div>
                                     </div>
-
-                                    <!-- <p>Restrictions</p>
-                                    <ol>
-                                        <li>You do not have the rights to redistribute, resell, lease, license, sub-license or offer the file downloaded to any third party.</li>
-                                        <li>For any resalable web applications or software programs, you cannot include our graphic resources as an additional attachment.</li>
-                                        <li>You cannot redistribute any of the software, or products created with Tabler paid products.</li>
-                                        <li>You cannot add our source code to any open source repository.</li>
-                                        <li>The source code may not be placed on any website in a complete or archived downloadable format.</li>
-                                    </ol> -->
+                                    <div class="toast-container flex-container">
+                                        <div class="cols-12" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false" data-bs-toggle="toast">
+                                            <div class="toast-header">
+                                            <strong class="me-auto">Contoh Kegiatan</strong>
+                                            <span class="badge bg-cyan-lt">{{ jafung.pelaksana }}</span>
+                                            </div>
+                                            <div class="toast-body antialiased">
+                                            {{ jafung.contoh }}
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -119,11 +121,8 @@
     </div>
 </template>
 <script setup>
-import Pagination from '../../Shared/Pagination'
-import FlashMessages from '../../Shared/FlashMessages'
-import { ref, watch } from 'vue'
-import { Inertia } from '@inertiajs/inertia'
-import debounce from 'lodash/debounce'
+import { ref } from 'vue'
+// import { Inertia } from '@inertiajs/inertia'
 
 let props = defineProps({
     jafungs: Object,

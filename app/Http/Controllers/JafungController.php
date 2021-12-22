@@ -17,17 +17,19 @@ class JafungController extends Controller
      */
     public function index($klas = null)
     {
-        if($klas){
-            $klasifikasi = ucfirst($klas);
-        }
-        $jafungs = Jafung::query()->where('klasifikasi',$klasifikasi)
+        $jafungs = Jafung::query()
         ->when(Request::input('search'), function ($query, $search) {
             $query->where('unsur', 'like', "%{$search}%")
             ->orWhere('sub_unsur', 'like', "%{$search}%")
             ->orWhere('uraian_kegiatan', 'like', "%{$search}%")
             ->orWhere('output', 'like', "%{$search}%");
-        })->paginate(6)->withQueryString()
-        ->through(fn($jafung) => [
+        });
+        if($klas == 'ahli'){
+            $jafungs = $jafungs->ahli()->paginate(6)->withQueryString();
+        }else{
+            $jafungs = $jafungs->terampil()->paginate(6)->withQueryString();
+        }
+        $jafungs->through(fn($jafung) => [
             'id' => $jafung->id,
             'klasifikasi' => $jafung->klasifikasi,
             'no' => $jafung->no,
@@ -44,7 +46,8 @@ class JafungController extends Controller
             ]);
         return Inertia::render('Jafung/Index', [
             'jafungs' => $jafungs,
-            'filters' => Request::only(['search'])
+            'filters' => Request::only(['search']),
+            'klas' => $klas
         ]);
     }
 

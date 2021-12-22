@@ -109,7 +109,7 @@ export default {
             this.$inertia.post('/logout')
         },
         getLogo() {
-            return 'http://127.0.0.1:8000/static/smartkit_logo.png'
+            return 'https://jafung.local.dev/static/smartkit_logo.png'
         },
     },
 }
