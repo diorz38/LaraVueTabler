@@ -13,6 +13,10 @@ const path = require('path');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+    .styles([
+        'node_modules/@tabler/core/dist/css/tabler.min.css',
+        'node_modules/@tabler/core/dist/css/demo.min.css',
+    ], 'public/css/tabler.css')
     .alias({ ziggy: path.resolve('vendor/tightenco/ziggy/dist.vue') })
     .extract()
     .vue(3)
