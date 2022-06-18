@@ -17,14 +17,13 @@ class AuthController extends BaseController
         ]);
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            $user = Auth::user();
-            $tokenResult = $user->createToken('psa-app');
+            $tokenResult = Auth::user()->createToken('psa-app');
 
             return [
                 'success' =>true ,
                 'access_token' => $tokenResult->accessToken  ,
                 'expired_at' => $tokenResult->token->expires_at,
-                'data' => $user,
+                'data' => Auth::user(),
                 'message' => 'User Login Successfully',
 
             ];

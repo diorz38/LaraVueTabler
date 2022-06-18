@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Jafung;
 use Auth;
 use Inertia\Inertia;
-use Request;
+use App\Models\Jafung;
+use App\Models\Employee;
+use Illuminate\Support\Facades\Request;
+use App\Http\Resources\EmployeeResource;
+use Illuminate\Support\Facades\Validator;
 
 class JafungController extends Controller
 {
