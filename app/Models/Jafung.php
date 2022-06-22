@@ -4,13 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Request;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Jafung extends Model
 {
+    use HasFactory;
 
     protected $table = 'jafung';
     public $timestamps = false;
 
+    // protected $fillable = ['klasifikasi','no','unsur',];
     protected $guarded = ['id','created_at','updated_at'];
 
     public function scopeAhli($query)
